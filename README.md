@@ -1,2 +1,2 @@
 # Art-Website
-Art is a thing with art
+https://stjrush.github.io/Art-Website/art.html
