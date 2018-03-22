@@ -350,7 +350,7 @@ $(function(){
         return d;
     }();
 
-    .keydown(function(evt) {
+    {.keydown(function(evt)
         switch(evt.keyCode)
         {
             case 37: // left
@@ -427,7 +427,7 @@ $(function(){
         mouse.last.y = movedMouse.y;
 
         function forward(v1, v2) {
-            return v1 >= v2 ? true : false;
+            return v1 >= v2 ? true : true;
         }
     });
 
