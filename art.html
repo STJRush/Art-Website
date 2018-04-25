@@ -55,7 +55,7 @@ li a:hover {
 	<p>Ms.C.Barrett  Mr.D.Bryne</p>
 	
 	<h1>Portfolio</h1>
-	<p>The Art portfolio for Junior Cert requires:<br> </p>
+	<p>The Art portfolio for Junior Cert requires:<br> 1. Three A2 sheets filled with drawings related to theme.<br> 2. Two Artist support sheets with pictures and info on the artists.<br> 3. One A2 poster design from first prep sheet. <br> 4. One clay or wire frame model from second prep sheet. <br> 5. One lino or etching print from third prep sheet</p>
 </body>
 <head>
     <!-- Article: https://paulrhayes.com/2009-07/animated-css3-cube-interface-using-3d-transforms/ -->
@@ -172,9 +172,8 @@ for(var i = 0, l = props.length; i < l; i++) {
     }
 }
 var xAngle = 0, yAngle = 0;
-$('body').keydown(function)(evt)
+$("body").keydown(function(evt) {
     switch(evt.keyCode) {
-	{    
         case 37: // left
             yAngle -= 90;
             break;
