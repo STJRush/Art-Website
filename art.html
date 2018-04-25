@@ -174,17 +174,18 @@ for(var i = 0, l = props.length; i < l; i++) {
 var xAngle = 0, yAngle = 0;
 $('body').keydown(function)(evt)
     switch(evt.keyCode) {
-        case 65: // left
+	{    
+        case 37: // left
             yAngle -= 90;
             break;
-        case 87: // up
+        case 38: // up
             xAngle += 90;
             evt.preventDefault();
             break;
-        case 68: // right
+        case 39: // right
             yAngle += 90;
             break;
-        case 83: // down
+        case 40: // down
             xAngle -= 90;
             evt.preventDefault();
             break;
