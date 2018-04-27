@@ -61,4 +61,116 @@ li a:hover {
 	<p>The Art portfolio for Junior Cert requires:<br> <br> 1. Three A2 sheets filled with paintings related to theme.<br> 2. Two A2 sheets filled with artist info related to theme.<br> 3. One A2 painting related to first prep sheet.<br> 4. One clay or wire frame model relating to your second prep sheet.<br> 5. One etching or lino print related to your third prep sheet.</p>
 	<a href="https://www.examinations.ie/misc-doc/EN-EX-83238288.pdf"> More Info </a>
 </body>
+<div class="wrap">
+  <div class="cube">
+    <div class="front">
+      Front side
+    </div>
+    <div class="back">
+      Back side
+    </div>
+    <div class="top">
+      Top side
+    </div>
+    <div class="bottom">
+      Bottom side
+    </div>
+    <div class="left">
+      Left side
+    </div>
+    <div class="right">
+      Right side
+    </div>
+  </div>
+</div>
+.wrap {
+  margin-top: 150px;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+}
+.cube {
+  margin: auto;
+  position: relative;
+  height: 200px;
+  width: 200px;
+  transform-style: preserve-3d;
+}
+
+.cube > div {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  opacity: 0.9;
+  background-color: #000;
+  border: solid 1px #eeeeee;
+  color: #ffffff;
+}
+.front {
+  transform: translateZ(100px);
+}
+
+.back {
+  transform: translateZ(-100px) rotateY(180deg);
+}
+
+.right {
+  transform: rotateY(-270deg) translateX(100px);
+  transform-origin: top right;
+}
+
+.left {
+  transform: rotateY(270deg) translateX(-100px);
+  transform-origin: center left;
+}
+
+.top {
+  transform: rotateX(-270deg) translateY(-100px);
+  transform-origin: top center;
+}
+
+.bottom {
+  transform: rotateX(270deg) translateY(100px);
+  transform-origin: bottom center;
+}
+@keyframes rotate {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+.cube {
+  animation: rotate 20s infinite linear;
+}
+.wrap:hover .front {
+  transform: translateZ(200px);
+}
+
+.wrap:hover .back {
+  transform: translateZ(-200px) rotateY(180deg);
+}
+
+.wrap:hover .right {
+  transform: rotateY(-270deg) translateZ(100px) translateX(100px);
+}
+
+.wrap:hover .left {
+  transform: rotateY(270deg) translateZ(100px) translateX(-100px);
+}
+
+.wrap:hover .top {
+  transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
+}
+
+.wrap:hover .bottom {
+  transform: rotateX(270deg) translateZ(100px) translateY(100px);
+}
+.cube > div {
+  transition: transform 0.2s ease-in;
+}
 </html> 
