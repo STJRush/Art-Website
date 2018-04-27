@@ -5,44 +5,45 @@
 <style>
   
   body { 
-              background-color: #C8BFE7;
-	      text-align: center;
+               background-color: #C8BFE7;
+	       text-align: center;
        }
   ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
- }
-li {
-    float: left;
-}
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-li a:hover {
-    background-color: #111;
-}
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+       }
+   li {
+                float: left;
+       }
+   li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+        }
+   li a:hover {
+                background-color: #111;
+        }
   
    p {
 		color: #1a1a1a;
 		font-size: 32px;
 		font-family: Arial, Helvetica, sans-serif;
-  }
-	h1{ 
+        }
+   h1{ 
 		color: #ffffff;
 	        font-size: 45px;
 		text-shadow: 2px 2px 4px #000000;
 	}
 	
    a { 
-	   font-size: 32px;
-	   font-family: Arial, Helvetica, sans-serif;
+	        font-size: 30px;
+	        font-family: Arial, Helvetica, sans-serif;
+	}
 	   
   </style>
 <body>
@@ -60,119 +61,8 @@ li a:hover {
 	<h1>Portfolio</h1>
 	<p>The Art portfolio for Junior Cert requires:<br> <br> 1. Three A2 sheets filled with paintings related to theme.<br> 2. Two A2 sheets filled with artist info related to theme.<br> 3. One A2 painting related to first prep sheet.<br> 4. One clay or wire frame model relating to your second prep sheet.<br> 5. One etching or lino print related to your third prep sheet.</p>
 	<a href="https://www.examinations.ie/misc-doc/EN-EX-83238288.pdf"> More Info </a>
-</body>
-<script>
-<div class="wrap">
-  <div class="cube">
-    <div class="front">
-      Front side
-    </div>
-    <div class="back">
-      Back side
-    </div>
-    <div class="top">
-      Top side
-    </div>
-    <div class="bottom">
-      Bottom side
-    </div>
-    <div class="left">
-      Left side
-    </div>
-    <div class="right">
-      Right side
-    </div>
-  </div>
-</div>
-.wrap {
-  margin-top: 150px;
-  perspective: 1000px;
-  perspective-origin: 50% 50%;
-}
-.cube {
-  margin: auto;
-  position: relative;
-  height: 200px;
-  width: 200px;
-  transform-style: preserve-3d;
-}
-
-.cube > div {
-  position: absolute;
-  box-sizing: border-box;
-  padding: 10px;
-  height: 100%;
-  width: 100%;
-  opacity: 0.9;
-  background-color: #000;
-  border: solid 1px #eeeeee;
-  color: #ffffff;
-}
-.front {
-  transform: translateZ(100px);
-}
-
-.back {
-  transform: translateZ(-100px) rotateY(180deg);
-}
-
-.right {
-  transform: rotateY(-270deg) translateX(100px);
-  transform-origin: top right;
-}
-
-.left {
-  transform: rotateY(270deg) translateX(-100px);
-  transform-origin: center left;
-}
-
-.top {
-  transform: rotateX(-270deg) translateY(-100px);
-  transform-origin: top center;
-}
-
-.bottom {
-  transform: rotateX(270deg) translateY(100px);
-  transform-origin: bottom center;
-}
-@keyframes rotate {
-  from {
-    transform: rotateX(0deg) rotateY(0deg);
-  }
-  
-  to {
-    transform: rotateX(360deg) rotateY(360deg);
-  }
-}
-
-.cube {
-  animation: rotate 20s infinite linear;
-}
-.wrap:hover .front {
-  transform: translateZ(200px);
-}
-
-.wrap:hover .back {
-  transform: translateZ(-200px) rotateY(180deg);
-}
-
-.wrap:hover .right {
-  transform: rotateY(-270deg) translateZ(100px) translateX(100px);
-}
-
-.wrap:hover .left {
-  transform: rotateY(270deg) translateZ(100px) translateX(-100px);
-}
-
-.wrap:hover .top {
-  transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
-}
-
-.wrap:hover .bottom {
-  transform: rotateX(270deg) translateZ(100px) translateY(100px);
-}
-.cube > div {
-  transition: transform 0.2s ease-in;
-}
-	</script>
+	<img src="https://tinyurl.com/ycjhpjv8" height="100" width="200">
+	<img src="https://tinyurl.com/ycp3tvla" height="100" width="200">
+	<img src="https://tinyurl.com/y9r9fycq" height="100" width="200">
+	     </body>
 </html> 
