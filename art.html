@@ -1,6 +1,6 @@
 <html>
 <title>St Joseph's Art</title>
-  <link rel="https://www.apponic.com/storage/images/228/188/768b909b8caf70de0f60f4f749bb181b.png">
+  <link rel="icon" href="https://www.apponic.com/storage/images/228/188/768b909b8caf70de0f60f4f749bb181b.png">
   
 <style>
   
@@ -13,7 +13,7 @@
                 margin: 0;
                 padding: 0;
                 overflow: hidden;
-                background-color: #111;
+                background-color: #000000;
        }
    li {
                 float: left;
@@ -26,7 +26,7 @@
                 text-decoration: none;
         }
    li a:hover {
-                background-color: #191919;
+                background-color: #2e2e30;
         }
   
    p {
@@ -109,56 +109,6 @@
   .text {font-size: 11px}
 }
 	
-	#loader {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 1;
-  width: 150px;
-  height: 150px;
-  margin: -75px 0 0 -75px;
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #3498db;
-  width: 120px;
-  height: 120px;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Add animation to "page content" */
-.animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s
-}
-
-@-webkit-keyframes animatebottom {
-  from { bottom:-100px; opacity:0 } 
-  to { bottom:0px; opacity:1 }
-}
-
-@keyframes animatebottom { 
-  from{ bottom:-100px; opacity:0 } 
-  to{ bottom:0; opacity:1 }
-}
-
-#myDiv {
-  display: none;
-  text-align: center;
-}
 	
   </style>
 <body>
@@ -171,7 +121,7 @@
 	
 	<h1><b>Art in St.Joseph's</b></h1>
 	<p>Art is one of the many choice subjects in St. Joseph's.<br> In the first year of school, students will get to experience all choice subjects and eventually choose two to work towards for Junior Cert</p>
-	<h1><b>Teachers</b></h1>
+	<h1 id="#teachers"><b>Teachers</b></h1>
 	<p>Ms.C.Barrett  Mr.D.Bryne</p>
 	
 	<h1>Portfolio</h1>
@@ -195,15 +145,24 @@
 </div>
 
 <script>
-var myVar;
+var slideIndex = 0;
+showSlides();
 
-function myFunction() {
-    myVar = setTimeout(showPage, 3000);
-}
-
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 </script>
 </html> 
