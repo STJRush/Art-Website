@@ -45,13 +45,46 @@
 	        font-family: Arial, Helvetica, sans-serif;
 	}
 	  
-	.slideshow-container {
+	
+	* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
 }
 
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
 
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
 .text {
   color: #f2f2f2;
   font-size: 15px;
@@ -62,7 +95,7 @@
   text-align: center;
 }
 
-
+/* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
@@ -71,27 +104,28 @@
   top: 0;
 }
 
-
+/* The dots/bullets/indicators */
 .dot {
+  cursor: pointer;
   height: 15px;
   width: 15px;
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 10s ease;
+  transition: background-color 0.6s ease;
 }
 
-.active {
+.active, .dot:hover {
   background-color: #717171;
 }
 
-
+/* Fading animation */
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 0.25s;
+  -webkit-animation-duration: 1.5s;
   animation-name: fade;
-  animation-duration: 0.25s;
+  animation-duration: 1.5s;
 }
 
 @-webkit-keyframes fade {
@@ -104,12 +138,10 @@
   to {opacity: 1}
 }
 
-
+/* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
+  .prev, .next,.text {font-size: 11px}
 }
-	
-	
   </style>
 <body>
 <ul>
@@ -130,39 +162,58 @@
 	<div class="slideshow-container">
 
 <div class="mySlides fade">
-  <img src="https://tinyurl.com/y9r9fycq" style="width:100%">
+  <img src="https://lh3.googleusercontent.com/BmjMffGnn8SsVG7upFGx3DDd4wkXXtmtHTqth2uTQumofFNBxrzr727GNQeFByFK1tWWmamXL7WQMu6jp1WdLMZVU2we5Z9MCcnKwrW2YqatiLAL10EC0x6mkUfQzIiaanDvpzqehsXGJZaAe6nM1pkHygu5e2Ykubu3ietOGGe1JaHBFJTxWhTCxLLozRVNIXk2RCUUQZ6MZt7E0617QtzX4cIKrdvVmbfIlE0SQDhg45y4m9ieucvMJ4vBDGT9HaQE2aWoL0-iCk97jqMLaZr9yLRvXoaylKxxgkEvyB2LBl2HRIWDK1uuIwkVmIMA9Sek1_C5py95WwfyPsfC2R_cSTXX8EMrFEHiFcgXG5ryxTxRcPBVym0OajdpQfTc7XDZZhRD6y_IrgC1pX9C_wOqNneypXIkO-ucqHt9q44bK3u1BoWX2ITq_zVC2dAPjhTM6zYptjRK5lfcmNoyYi74YhOnYx0sh2vKEz0v4DjKjiIpbk2-ySy1NLp948lGrrSRJaR334KA7qx3XWOMtcvtBqbmr9jre5y9MqzKhjIrKeFrZstYAdhxkU5s4p1ZVucEKgiBS0yEmbxYjrTnzFCkB__zGAoTvvP2tmM=w1134-h637-no" style="width:100%">
+  <div class="text">Prep Sheet</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="https://lh3.googleusercontent.com/T8q3COT98Kj0H2yxCo7BqdQqXd1fiRlj1-pGwuLpzYrYtMxViPsFHjg7hgPeL---v6JfEJWSahK4rLEPCNsOFDGSRQEaHstPV_pVF7vFTFi-h_LSxSSAIAu141JreChXsrmTvU2ftjU-nRMH4-xSWBeSh6veTOnKKvtDcBx3wLgZVQ9nkM0Ba8ztJCLWTl4QwHvtuFq8HficeOGIILPjcaWJ2Sb0Yi2nFhZuXt5Y7o4axObyQdxnODF52dAk_-NaZxrDw2Nuyxgm0OJuuvKlkwvDqlBQJQ0VTPlOXcKGuHzVR4Jz-oX0bpuuE8nXoSpGGxm5ADzdVInRGuqB0Of7B9ejLvOtQJHbR5zFBJ5DiLnp-vSm4ST5rIqL72FCYrc4JAaL2XAKV0iTg_whf3hMD1g7rpdZ9Q_MiU2mkjb80BVfznS30ECRMDafHIs53WnCeaKTDYez30jLj1Yv-xhAEvdmyk4GpXxDAg9Faisjou6qvc2-Shl7o3zqeAujeiwKkB8n1ezRKjGkT1VzILPgBFsCn_zPPXINc72iyb1QzjPPmu50aTuulz0w8_Hrl69fI1Xb5lz_iJ_3v6UzbaAbHnyAsNNp5-xM1qkwe1k=w1134-h637-no" style="width:100%">
+  <div class="text">Prep Sheet</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="https://lh3.googleusercontent.com/6lOV2hHvObg1HpcyoHhWb_Jmb5fr5OOsnTl86JtE0FY8P37gLoRhGXN5e3kUP6oT7V1EjoIfaRaHvtQ29WjaMXXZ2wP8FmFjCNhdlV7SFJBP77Dg6VjMHMw86Bk5WHyrNUzDsTwkhGegx26Snfq6Df-FaehBJCnB7s9ho2WrAKnHB1lUrdYcBpGsku1TzO13us-Qqx26e__OaYSMOCauU3TkbM4JXksoJu8Dst6p8Yz8Z-YvzA7N3Tl2K4ZKf8_OfdQ6ITWDRl-lrYtxpckWIVtsNTcNSz7VZ8HXW4HIPy_6hxyUSzLqkT8jfo1QNeYELW8Gj4ewH9rJ3ayNSjhYTgWcbG29gcMzkiVxgdX3dnj9hgQ4u4OmHl2Coikb6LVzwHixuFAVGkA5KbtBpDRnWjRZKWio_tKa-veg52LaXigHjXvYIcBMcmah63-sQc_40AaeFWLVyclcquG0qU4lYUjR9gEYtyBf5dpqQ5f8vQDyTZKBSrXrGZ_gXPqgJ-iHjE-zQg2dMkHmR8PDc2ubXzTSW41NFc5HF-Xn186Iibq4Nypc4tL0NwUiMRX84gJaFtEcmNgvjHJos4napZc0zM9q3If8QieowtK_-oI=w1134-h637-no" style="width:100%">
   <div class="text">Etching Print</div>
 </div>
 
-<div class="mySlides fade">
-  <img src="https://lh3.googleusercontent.com/2VifUikgVYOoJkNtyy2H1jM8f3fSf5vo543Ili9I5Q59m6kMuph6IQ_NepJSNhdLK7RtrR3gIhhgBgP1L_VhixEXKfmqDCt3EzUh3lLOQqCurIGXtgOH_K14WV7g07fidZ6awSBnMgL5ZWk2QToj19p5PZxzbMK1TA3uKEZ74G1CD_FAHQvoNu0446sAgCzVDE61k9D9jft_10_yndl-mDso0kSW52CbNgEBAybFxAN9aLzeUnrWMXB7Z2t7UiPi9P0bpVJSpjX9vpM4m8cfKtzjwoFSZNh6oUZ8OcxnyodA4sjYXcKBsgogiNrfOwBBWfo1wBmH2uxOon-CXEIFi0tIZUKsRe3oFGRC4AA580BTNkjBjQDZpAoIIHqLtHkpnLnop5ogushydJH-7OYPXJlay7Ou6JQwDQCxGsuLJ3pNMOhb_ybo9ELBSjIALuDuXO8fz2BTTTpAzXidPl7Ws6fgLB6eVkUqrjna1Stcv2lZa9KPcSGIshaHNyFaCmTk3Z41ffDq1M-kip6Hw_uLptNPzXVlf7Zr1TsI82DQhAlWBsLv9vt92CKhJPMqj619QxxiKb5t7-UcxBWQkSJ7d_aiu8gmPjAes-qn4e0=w1280-h720-no" style="width:100%">
-  <div class="text">Prep Sheet</div>
-</div>
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-<div class="mySlides fade">
-  <img src="https://lh3.googleusercontent.com/xGjYJp3a84toaV_lJy151PCShvaO8veWtoQP6hDzobNSSo5h0zAlE-be99PSsMEPGntEYgYVEcCiLmgmiaxN8WhfMNt4HCnniQr9XiGIgyUVbcp2pOAgQv28skpzrxCSFQAAbMHXsOEk5U0cN3EF_OIqzaHXYVDacvAop2j6s80b6kIyIg3FNVfIRcPsNMgZdvSwmY1JNz9DNRJ0-Qo1vUHreibwC1GrcykupMDMUPx3KeAudZhJRqSqytHV3jpXFqC66jCy5zgqoNboQ0Wq873o3gtrXLg_KzSiMQMbuvthDOmb2kCnlQtNKLxgnIJo7Od_ChqEGm4oRiXeOaq9Wwadj1CLh8sUN-dHurQr2htl-vAZJ6a680lnTdikLqQIC-GkarKWGp1dWQhBkEQM2eIFeO5YOaEK81p4Go9lvUSsXRe8UsIkEu_4vqHt4gAk_TVLzGvoNTHA4zTsQEzB6MXHqs9BYoahNjmH2k9QSt_-m472BpD3Olnl4Na9cRc19QgyvxGwWegjCP-t7byPQwvysnGX01ggOgIeHdgxk7ifHGbPKUTidhyY-07XIrYItXghS3Kp6QqXe7AXKgQIr6M12h7cmEJHYgqOyVo=w1280-h720-no" style="width:100%">
-  <div class="text">Prep Sheet</div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
 </div>
 
 <script>
-var slideIndex = 0;
-showSlides();
+var slideIndex = 1;
+showSlides(slideIndex);
 
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
 }
 </script>
 </html> 
