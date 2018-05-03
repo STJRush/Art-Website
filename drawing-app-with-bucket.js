@@ -761,7 +761,7 @@ var drawingApp = (function () {
 
 				resourceLoaded();
 			};
-			outlineImage.src = "images/watermelon-duck-outline.png";
+			
 		};
 
 	return {
